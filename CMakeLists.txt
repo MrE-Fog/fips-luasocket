@@ -16,23 +16,23 @@ if (FIPS_WINDOWS OR FIPS_OSX OR FIPS_LINUX)
             inet.c inet.h
             io.c io.h
             luasocket.c luasocket.h
-            mime.c mime.h
             options.c options.h
             pierror.h
             select.c select.h
-            serial.c
             socket.h
             tcp.c tcp.h
             timeout.c timeout.h
             udp.c udp.h
-            unix.c unix.h
-            unixdgram.c unixdgram.h
-            unixstream.c unixstream.h
         )
         if (FIPS_WINDOWS)
             fips_files(wsocket.c wsocket.h)
         else()
-            fips_files(usocket.c usocket.h)
+            fips_files(
+                unix.c unix.h 
+                unixdgram.c unixdram.h 
+                unixstream.c unixstream.h
+                usocket.c usocket.h
+            )
         endif()
         fips_deps(lua)
     fips_end_lib()
