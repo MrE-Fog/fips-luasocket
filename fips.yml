@@ -1,0 +1,12 @@
+#
+# fips-luasocket
+#
+---
+imports:
+    fips-lua:
+        git: https://github.com/fips-lua
+
+exports:
+    header-dirs: [ . ]
+    modules:
+        luasocket: .
