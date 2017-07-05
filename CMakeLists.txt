@@ -29,7 +29,7 @@ if (FIPS_WINDOWS OR FIPS_OSX OR FIPS_LINUX)
         else()
             fips_files(
                 unix.c unix.h 
-                unixdgram.c unixdram.h 
+                unixdgram.c unixdgram.h 
                 unixstream.c unixstream.h
                 usocket.c usocket.h
             )
